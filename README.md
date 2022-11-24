@@ -5,14 +5,9 @@ created by following [this tutorial](https://realpython.com/python-hash-table/) 
 The `HashTable` class replicates many methods from Python dictionaries, including
 `HashTable.clear()` and `HashTable.update()`.  
 
-Developing this package reinforced knowledge in the following areas:  
-* Python classes, including dunder methods  
-* Hash table implementation, including handling hash collisions  
-* Testing, including TDD, unit tests, and `pytest`  
-* Developing Python packages  
-
 ## Installation 
 
+This package is available in [PyPI](https://pypi.org/project/hashtable-nicolerg/1.0.0/). 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `HashTable`.
 
 ```bash
@@ -22,7 +17,7 @@ python3 -m pip install hashtable-nicolerg
 ## Usage 
 
 ```python
-from hashtable-nicolerg import HashTable
+from hashtable_nicolerg.hashtable import HashTable
 
 # Create an instance of HashTable with initial size 10
 # and loading factor threshold 0.5, meaning the HashTable
@@ -43,3 +38,11 @@ hash_table.update({"blue":"0000FF"})    # Update value for key "blue" using a di
 hash_table["blue"]                      # Return value for key "blue"
 hash_table.clear()                      # Remove all key-value pairs 
 ```
+
+## Motivation 
+
+Developing this package reinforced knowledge in the following areas:  
+* Python classes, including dunder methods  
+* Hash table implementation, including handling hash collisions  
+* Testing, including TDD, unit tests, and `pytest`  
+* Developing Python packages  

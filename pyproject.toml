@@ -1,6 +1,9 @@
 [build-system]
-requires = ["hatchling", "typing", "collections", "pytest", "pytest-unordered"]
+requires = ["hatchling", "typing", "pytest", "pytest-unordered"]
 build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
 
 [project]
 name = "hashtable_nicolerg"

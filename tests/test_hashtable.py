@@ -1,6 +1,6 @@
 import pytest
 from pytest_unordered import unordered
-from hashtable import HashTable
+from hashtable_nicolerg.hashtable import HashTable
 from collections import deque
 
 @pytest.fixture

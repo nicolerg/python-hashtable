@@ -14,7 +14,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `HashTa
 python3 -m pip install hashtable-nicolerg
 ```
 
-Alternatively, experiment with `HashTable` in a [Docker container](https://github.com/nicolerg/python-hashtable/docker/).
+Alternatively, experiment with `HashTable` in a [Docker container](https://github.com/nicolerg/python-hashtable/tree/master/docker).
 
 ## Usage 
 

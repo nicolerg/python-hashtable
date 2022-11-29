@@ -7,7 +7,7 @@ pythonpath = "src"
 
 [project]
 name = "hashtable_nicolerg"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
   { name="Nicole Gay", email="nicole.r.gay@gmail.com" },
 ]
@@ -22,5 +22,5 @@ classifiers = [
 
 [project.urls]
 "Docker Image" = "https://hub.docker.com/repository/docker/nicolerg/python-hashtable"
-"Source Code" = "https://github.com/nicolerg/python-hashtable/hashtable-nicolerg"
+"Source Code" = "https://github.com/nicolerg/python-hashtable/tree/master/hashtable-nicolerg"
 "Guiding Tutorial" = "https://realpython.com/python-hash-table"

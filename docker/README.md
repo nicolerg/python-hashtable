@@ -1,6 +1,6 @@
 # `nicolerg/python-hashtable`: HashTable Docker image
 
-This Python-based Docker image includes an installation of the [hashtable-nicolerg](https://github.com/nicolerg/python-hashtable/hashtable-nicolerg/) Python package,
+This Python-based Docker image includes an installation of the [hashtable-nicolerg](https://github.com/nicolerg/python-hashtable/tree/master/hashtable-nicolerg) Python package,
 created by following [this tutorial](https://realpython.com/python-hash-table/) written by Bartosz Zaczyński. 
 The `HashTable` class replicates many methods from Python dictionaries, including
 `HashTable.clear()` and `HashTable.update()`.  

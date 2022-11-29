@@ -1,20 +1,25 @@
-# HashTable
+# HashTable 
 
-This repository provides a custom implementation of a hash table in Python,
+This simple package provides a custom implementation of a hash table in Python,
 created by following [this tutorial](https://realpython.com/python-hash-table/) written by Bartosz Zaczyński. 
 The `HashTable` class replicates many methods from Python dictionaries, including
 `HashTable.clear()` and `HashTable.update()`.  
 
-## Get Started 
+## Installation 
 
-This repository provides two ways to use the `HashTable` class:  
-* [Python package](hashtable-nicolerg/README.md)  
-* [Docker image](docker/README.md)
+This package is available in [PyPI](https://pypi.org/project/hashtable-nicolerg/). 
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `HashTable`.
+
+```bash
+python3 -m pip install hashtable-nicolerg
+```
+
+Alternatively, experiment with `HashTable` in a [Docker container](https://github.com/nicolerg/python-hashtable/docker/).
 
 ## Usage 
 
 ```python
-from hashtable_nicolerg.hashtable import HashTable # not required if using Docker image
+from hashtable_nicolerg.hashtable import HashTable
 
 # Create an instance of HashTable with initial size 10
 # and loading factor threshold 0.5, meaning the HashTable
@@ -38,10 +43,34 @@ hash_table.clear()                      # Remove all key-value pairs
 
 ## Motivation 
 
-Developing this repository reinforced knowledge in the following areas:  
+Developing this package reinforced knowledge in the following areas:  
 * Python classes, including dunder methods  
 * Hash table implementation, including handling hash collisions  
 * Testing, including TDD, unit tests, and `pytest`  
 * Developing [Python packages](https://packaging.python.org/en/latest/tutorials/packaging-projects/)  
-* Containerization with [Docker](https://docs.docker.com/)
-* [Using the `PYTHONSTARTUP` environment variable](https://stackoverflow.com/questions/74609139/can-i-import-default-python-modules-in-a-python-docker-image)  
+
+## Dev notes
+
+1. Create the [recommended directory structure](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-the-package-files) and populate files 
+2. Build the package in the same directory as `pyproject.toml`, which should create a `dist/` directory    
+    ```bash
+    python3 -m build
+    ```
+3. Use [Twine](https://twine.readthedocs.io/en/stable/) to upload the package to [PyPI](https://pypi.org/)  
+    ```bash
+    python3 -m pip install --upgrade twine
+    python3 -m twine upload dist/*
+    ```
+4. Install your newly uploaded package 
+    ```bash
+    python3 -m pip install hashtable-nicolerg
+    ```
+5. To update the package, increment the version in `pyproject.toml``, build, and upload  
+    ```bash
+    python3 -m build
+    python3 -m twine upload --skip-existing dist/*
+    ```
+6. Install and test your new version  
+    ```bash
+    python3 -m pip install hashtable-nicolerg --upgrade
+    ```
